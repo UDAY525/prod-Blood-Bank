@@ -28,11 +28,11 @@ app.use("/api/v1/analytics", require("./routes/analyticsRoutes"));
 app.use("/api/v1/admin", require("./routes/adminRoutes"));
 
 // Static Folder
-app.use(express.static(path.join(__dirname,'./client/build')))
-// Static Routes
-app.get('*', function(req,res){
-  res.sendFile(path.join(__dirname,'./client/build/index.html'));
-})
+// app.use(express.static(path.join(__dirname,'./client/build')))
+// // Static Routes
+// app.get('*', function(req,res){
+//   res.sendFile(path.join(__dirname,'./client/build/index.html'));
+// })
 
 //port
 const PORT = process.env.PORT || 8080;
